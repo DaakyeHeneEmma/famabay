@@ -1,0 +1,23 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "express tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaakyeHeneEmma/express-app.git"
+  },
+  "author": "daakye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DaakyeHeneEmma/express-app/issues"
+  },
+  "homepage": "https://github.com/DaakyeHeneEmma/express-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.3.0"
+  }
+}
