@@ -1,20 +1,22 @@
 
-const express = require('express')
-
+const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT || 2000
 
-express.json([
-    limit = '95kb'
-])
+const url = 'mongodb://localhost/classLists'
 
-app.get('/', (_,res,next)=>{
-    res.status(200).contentType('application/json')
-    .cookie('rememberme', '1', 
-    {expires:new Date(Date.now() + 4000), httpOnly: true});
-    res.send('hello from here! coming from vsCode');
-    res.end();
-    next();
+const PORT = process.env.PORT || 2000;
+
+const db = mongoose.connection
+mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true});
+db.on('open',()=>{
+    console.log('mongoose server connected');
+})
+.on('error', (err)=>{
+    console.log('error coming from database', err);
+})
+ 
+app.get('/', (req,res)=>{
 })
 
 app.listen(PORT, ()=>{
