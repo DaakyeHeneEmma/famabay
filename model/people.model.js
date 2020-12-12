@@ -14,4 +14,4 @@ const peopleShema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('People', peopleShema)
+module.exports = mongoose.model('peoples', peopleShema)

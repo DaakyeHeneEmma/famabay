@@ -27,7 +27,7 @@ before('making connection to db before test', (done)=>{
 
 //routes
  
-app.get('/routes', require('./test/people'));
+// app.get('/routes', require('./class'));
 
 app.listen(PORT, ()=>{
     console.table([
