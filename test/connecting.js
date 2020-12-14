@@ -23,6 +23,13 @@ before('making connection to db before test', (done)=>{
     })
 })
 
+beforeEach((done)=>{
+    mongoose.connection.collections.peoples.drop();
+    mongoose.connection.collections.classlists.drop(()=>{
+        done();
+    });
+
+})
 
 
 //routes

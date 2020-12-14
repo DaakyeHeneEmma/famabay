@@ -11,7 +11,7 @@ describe('stores data', ()=>{
 
         it('storing the data', (done)=>{
             const user = new peopleShema({
-                name: "express tuts",
+                name: "angular tuts",
                 age : 34,
                 ownership : true
             })
