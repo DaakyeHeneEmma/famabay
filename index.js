@@ -1,36 +1,23 @@
 
-const express = require('express');
-const mongoose = require('mongoose');
-
-const app = express();
+const mongoose = require('mongoose')
 mongoose.Promise = global.Promise;
-
-//connections
-const url = 'mongodb://localhost:27017/classLists'
-const PORT = process.env.PORT || 2000;
+const express = require('express')
+const uri = 'mongodb://localhost:33017/usercollection'
 
 
-// testing before pass
-before('making connection to db before test', (done)=>{
-    const db = mongoose.connection
-    mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true});
-    db.once('open',()=>{
-        done();
-        // console.log('mongoose server connected');
-    })
-    .on('error', (err)=>{
-        console.log('error coming from database', err);
-    })
+const app = express()
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+const dbConnect = mongoose.connect(uri, {
+  useNewUrlParser:true,
+  useUnifiedTopology:true
 })
 
+dbConnect.then(()=>{
+  app.listen(5000)
+}).catch(err=>console.log(`db not connected ${err.message}`))
 
-
-//routes
- 
-app.get('/routes', require('./test/people'));
-
-app.listen(PORT, ()=>{
-    console.table([
-        {path: `http://127.0.0.1`, port: `${PORT}`,index: 01}
-    ])
-})
+app.use('/alldata', require('./routes/alldata'))
+app.use('/posts', require('./routes/posts'))
+app.use('/create', require('./routes/create'))

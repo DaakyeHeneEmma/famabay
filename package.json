@@ -1,29 +1,19 @@
 {
-  "name": "express-app",
+  "name": "gql",
   "version": "1.0.0",
-  "description": "express tutorials",
+  "description": "",
   "main": "index.js",
-  "type": "module",
+ 
   "scripts": {
-    "dev": "node index.js",
-    "build": "node index.js",
-    "test": "mocha"
+    "dev": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DaakyeHeneEmma/express-app.git"
-  },
-  "author": "daakye",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DaakyeHeneEmma/express-app/issues"
-  },
-  "homepage": "https://github.com/DaakyeHeneEmma/express-app#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "joi": "^17.3.0",
-    "mocha": "^8.2.1",
-    "mongodb": "^3.6.3",
-    "mongoose": "^5.10.14"
+    "apollo-server": "^2.25.0",
+    "express": "^4.17.2",
+    "graphql": "^15.5.0",
+    "mongoose": "^5.12.12"
   }
 }
