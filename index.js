@@ -21,3 +21,4 @@ dbConnect.then(()=>{
 app.use('/alldata', require('./routes/alldata'))
 app.use('/posts', require('./routes/posts'))
 app.use('/create', require('./routes/create'))
+app.use('/delete', require('./routes/delete'))
