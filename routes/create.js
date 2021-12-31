@@ -1,4 +1,4 @@
-const { router, UserSchema } = require('../middlewares/newware')
+const { router, UserSchema } = require('../middlewares/createRouter')
 
 const create = router.get('/', async(req,res,next)=>{
   const user = await new UserSchema({

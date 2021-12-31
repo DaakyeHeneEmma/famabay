@@ -1,4 +1,4 @@
-const { router, UserSchema, app } = require('../middlewares/newware')
+const { router, UserSchema, app } = require('../middlewares/createRouter')
  
 
  const posts = router.post("/", async(req,res)=>{
