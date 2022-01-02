@@ -1,6 +1,7 @@
-const { router, UserSchema } = require('../middlewares/routerConnection')
+const { router, UserSchema } = require('../middlewares/createRouter')
 
-const alldata = router.delete('/',async(req,res,next)=>{
+router.delete('/',async(req,res,next)=>{
+    // res.send("delete")
         const {name} = req.body
         const allUser = await UserSchema.find({})
         const data = await new UserSchema({name})
@@ -8,10 +9,11 @@ const alldata = router.delete('/',async(req,res,next)=>{
             if(!err){
                 res.send(docs)
                 console.log(docs)
+                console.log("item deleted")
             }
         })
         
       next(); 
 })
 
-module.exports = alldata;
+module.exports = router

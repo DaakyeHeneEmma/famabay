@@ -1,9 +1,10 @@
-const { router, UserSchema } = require('../middlewares/routerConnection')
+const { router, UserSchema } = require('../middlewares/alldataRouter')
 
 const alldata = router.get('/',async(req,res)=>{
-        await UserSchema.find({}, (err,docs)=>{
+        await UserSchema.find({},{_id:0,__v:0}, (err,docs)=>{
           if(!err){
            res.json(docs)
+           console.log("all entries");
           }else{console.log("error")}
         })
       })

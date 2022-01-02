@@ -18,7 +18,5 @@ dbConnect.then(()=>{
   app.listen(5000)
 }).catch(err=>console.log(`db not connected ${err.message}`))
 
-app.use('/alldata', require('./routes/alldata'))
-app.use('/posts', require('./routes/posts'))
-app.use('/create', require('./routes/create'))
-app.use('/delete', require('./routes/delete'))
+
+app.use('/api', require('./routes/route'))

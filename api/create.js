@@ -2,7 +2,7 @@ const { router, UserSchema } = require('../middlewares/createRouter')
 
 const create = router.get('/', async(req,res,next)=>{
   const user = await new UserSchema({
-    name: "ama",
+    name: "kks",
     age: 30,
     course: "metaverse"
   })
