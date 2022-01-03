@@ -1,6 +1,7 @@
-const { router, UserSchema } = require('../middlewares/alldataRouter')
+const cors = require('cors')
+const { router, corsOptions, UserSchema } = require('../middlewares/alldataRouter')
 
-const alldata = router.get('/',async(req,res)=>{
+const alldata = router.get('/', cors(corsOptions),(async(req,res)=>{
         await UserSchema.find({},{_id:0,__v:0}, (err,docs)=>{
           if(!err){
            res.json(docs)
@@ -8,7 +9,7 @@ const alldata = router.get('/',async(req,res)=>{
           }else{console.log("error")}
         })
       })
-
+)
 module.exports = alldata;
 
 
