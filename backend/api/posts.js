@@ -3,14 +3,12 @@ const { router, UserSchema, app } = require('../middlewares/postRouter')
 
  const posts = router.post("/", async(req,res)=>{
     try {
-      
-      const {name,age,course}= req.body
-      const hash = await bcrypt.hash(course, 10)
-      console.log(hash)
-      const data = await new UserSchema({ name,age,hash})
+      const {name,age,course,password}= req.body
+      const data = await new UserSchema({ name,age,course,password})
       
       data.save().then((result)=>{
         console.log(result)
+
         res.send(result)
         console.log('item inserted')
       })

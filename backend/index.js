@@ -2,7 +2,9 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise;
 const express = require('express')
+require('dotenv').config();
 const uri = 'mongodb://localhost:33017/usercollection'
+const PORT = process.env.PORT
 
 
 const app = express()
@@ -15,7 +17,7 @@ const dbConnect = mongoose.connect(uri, {
 })
 
 dbConnect.then(()=>{
-  app.listen(5000, ()=>{console.log("listening at port 5000")})
+  app.listen(PORT, ()=>{console.log(`listening at port ${PORT}`)})
 }).catch(err=>console.log(`db not connected ${err.message}`))
 
 
