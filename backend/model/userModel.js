@@ -13,6 +13,7 @@ const UserDB = new Schema({
 //hashing the password before saving the data
 UserDB.pre('save', (next)=>{
     this.password = bcrypt.hashSync(this.password, 10)
+    console.log('password hashed');
     next();
 })
 

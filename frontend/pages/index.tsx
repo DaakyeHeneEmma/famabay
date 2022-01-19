@@ -2,7 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 // import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Form from './login/form'
+// import Navbar from './components/layouts/navbar'
+import Layouts from './components/layouts/layout'
 
 const Home: NextPage = () => {
   return (
@@ -15,12 +16,29 @@ const Home: NextPage = () => {
       <main>
         <h1 className={styles.title}> </h1>
            <p >Famabay{' '}</p>
-           <Form />
       </main>
-
-     
-    </div>
+    </div> 
   )
 }
 
 export default Home
+
+
+
+// import type { ReactElement } from 'react'
+// import Layout from './components/layouts/layout'
+
+// export default function Page() {
+//   return {
+//     /** Your content */
+//   }
+// }
+
+
+// Page.getLayout = function getLayout(page: ReactElement) {
+//   return (
+//     // <Layout>
+//     {page}
+//     // </Layout>
+//   )
+// }

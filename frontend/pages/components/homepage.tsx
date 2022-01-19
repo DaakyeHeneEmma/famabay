@@ -4,4 +4,4 @@ const Homepage:NextPage= () =>{
     return <div>Layout</div>
 }
 
-export default Homepage
+export default Homepage 

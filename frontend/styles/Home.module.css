@@ -1,7 +1,12 @@
 .container {
   padding: 0 2rem;
 }
-
+.layout ol li{
+  text-align:right;
+  list-style-type: none;
+  float: left;
+  margin: 0.5rem
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;
