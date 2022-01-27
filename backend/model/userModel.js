@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
 
+//initializing the schema object
 const Schema = mongoose.Schema;
 
+//model for saving user data
 const UserDB = new Schema({
     name : String,
     age:Number,
@@ -10,12 +11,7 @@ const UserDB = new Schema({
     password:String
 })
 
-//hashing the password before saving the data
-UserDB.pre('save', (next)=>{
-    this.password = bcrypt.hashSync(this.password, 10)
-    console.log('password hashed');
-    next();
-})
 
+//exporting user model
 const UserSchema = mongoose.model('UserSchema', UserDB)
 module.exports = UserSchema;
