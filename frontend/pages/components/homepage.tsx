@@ -1,7 +1,14 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Card from './card-items/card';
+
 
 const Homepage:NextPage= () =>{
-    return <div>Layout</div>
+    return (
+        <>
+        <div>something here</div>
+        <Card title='card'/>
+        </>
+    )
 }
 
 export default Homepage 
