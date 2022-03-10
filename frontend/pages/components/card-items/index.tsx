@@ -1,25 +1,16 @@
-import React, { ReactNode } from 'react';
+import useSwr from 'swr'
 import Head from 'next/head'
 import styles from '../../../styles/Home.module.css'
-import useSwr from 'swr'
-import { createContext, useContext } from "react";
-import Card_Index from '../card-items/index';
+import Link from 'next/link'
 
 const fetcher = (url:any) => fetch(url).then((res) => res.json())
-
-
-const Store = createContext('');
-
-export const useStore = () => useContext(Store);
-
 type Props = {
   title?:string;
 }; 
 
-const Card = ({
+const Card_Index = ({
   title = 'famabay cards',
 }: Props): JSX.Element =>{
-
   const { data, error } = useSwr('/api/hello', fetcher)
 
   if (error) return <div>Failed to load users</div>
@@ -31,16 +22,24 @@ const Card = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <p>Famabay Items</p>
-   <div className={styles.card_item_m2}>
-   <Card_Index />
-     </div>
-          
-   
+
+    <ul className={styles.card_container}>
+      {data.map((user:any) => (
+        <li key={user.id}
+            className={styles.card_index}>
+          <Link href="/user/[id]" 
+                as={`/user/${user.id}`}>
+            <a>{`Name: ${user.name},
+                 Age: ${user.age}`}
+            </a>
+          </Link>
+        </li>
+     ))}
+    </ul>    
     
    </>
   )
 } 
   
 
-export default Card;
+export default Card_Index;

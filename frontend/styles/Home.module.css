@@ -32,13 +32,6 @@
   font-size: 4rem;
 }
 
-
-
-/* .homepage{
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: #2196F3;
-} */
 .logotext {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
@@ -46,4 +39,41 @@
   font-size: 30px;
   text-align: center;
 }
-  
+
+.card_index{
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  background-color: aliceblue;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+  text-align: center;
+  list-style-type: none;
+  font-size: 20px;
+  text-align: center;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+/* @media only screen and (max-width: 420px) {
+  .card_container {
+    background-color: green;
+  }
+  .card_index{
+    align-items: center;
+    margin-left: 62px;
+  }
+} */
+
+
+.card_container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 1px 1px;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
