@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head'
-import Link from 'next/link'
+import Navbar_Menu from './navbar_menu'
 import styles from '../../../styles/Home.module.css'
 import logo from '../../../public/logo.png'
 import Image from 'next/image'
@@ -30,12 +30,10 @@ const Layout = ({
             width={100}
             height={100}
              /> 
-        
-          <ol>
-               <li> <Link href="/"><a>Home</a></Link> </li>
-              <li> <Link href="/about"><a>About</a></Link> </li>
-              <li> <Link href="/contact"><a>Contact</a></Link> </li>
-          </ol>
+             <div className={styles.navbar_menu_container}>
+             <Navbar_Menu />
+             </div>
+      
       </header><br /><br /><br />
       {children}
     </div>

@@ -15,5 +15,10 @@
     "express": "^4.17.2",
     "graphql": "^15.5.0",
     "mongoose": "^5.12.12"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.4.5",
+    "@graphql-codegen/typescript-resolvers": "^2.5.2"
   }
 }

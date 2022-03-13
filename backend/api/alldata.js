@@ -8,7 +8,7 @@ const alldata = router.get('/', cors(corsOptions),(async(req,res)=>{
            res.json(docs)
            console.log("all entries");
           }else{console.log("error")}
-        })
+        }).sort({ metacritic: -1 });
       })
 )
 module.exports = alldata;
