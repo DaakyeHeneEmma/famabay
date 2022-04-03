@@ -1,4 +1,4 @@
-let content = [
+const content = [
     {
     data : `
     I am a hobbyist Web Developer a working 

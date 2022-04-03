@@ -1,9 +1,12 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Layout from './components/layouts/layout'
+import Main_Page from './components/main-page/main'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+  let title = 'Famabay'
+  if (title='main') return <Main_Page />
   return(
     <Layout>
       <Component {...pageProps} />

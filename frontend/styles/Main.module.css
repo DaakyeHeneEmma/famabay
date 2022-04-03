@@ -1,0 +1,25 @@
+.main_page_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 600px;
+    width: 1320px;
+    background-color: #001F3F;
+    margin: 0px 20px 0px 20px;
+    border-radius: 20px;
+  }
+  .left_pane {
+      height: auto;
+      width: 400px;
+      background-color: aqua;
+  }
+  .centre_pane {
+      height: auto;
+      width: 400px;
+      background-color: white;
+  }
+  .right_pane {
+      height: auto;
+      padding-left: -30px;
+      width: 100px;
+      background-color: gold;
+  }

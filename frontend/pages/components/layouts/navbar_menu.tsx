@@ -7,8 +7,9 @@ export default function Navbar_Menu() {
       <div className={styles.navbar_container}>
       <ul>
               <li> <Link href="/"><a>Home</a></Link> </li>
-              <li> <Link href="/about"><a>About</a></Link> </li>
+              <li> <Link href="/about"><a>Join Us</a></Link> </li>
               <li> <Link href="/contact"><a>Contact</a></Link> </li>
+              <li> <Link href="/contact"><a>About Us</a></Link> </li>
           </ul>
       </div>
        
