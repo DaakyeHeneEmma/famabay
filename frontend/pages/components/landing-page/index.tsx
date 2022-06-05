@@ -19,8 +19,6 @@ const Landing_Page:NextPage= () =>{
               mine and please forgive if I have missed to mention the 
               right source.`
             </div>
-            
-
        </div>
         </>
     )
