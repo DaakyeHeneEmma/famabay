@@ -2,9 +2,11 @@ import type { NextPage } from 'next';
 import styles from  '../../../styles/Main.module.css'
 import Head from 'next/head';
 import Attendance from './input'
+import RenderPage from './render-page';
 
 
-const Main_Page:NextPage= () =>{
+const Main_Page:NextPage= (first,last) =>{
+    console.log(first, last)
     return (
         <>
         <Head>
@@ -20,7 +22,7 @@ const Main_Page:NextPage= () =>{
             </div>  
             <div>
             <hr />
-            <Attendance />
+            <RenderPage />
             </div>
        </div>
         </>
