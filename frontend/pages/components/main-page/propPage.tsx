@@ -2,7 +2,7 @@ import { useState } from "react";
 
  const PropPage = ({firstname,lastname }:any) =>{
 
-    firstname = firstname;
+    // firstname = firstname;
     //  lastname = lastname;
     return (
         <>

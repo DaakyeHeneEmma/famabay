@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import styles from  '../../../styles/Main.module.css'
 import Head from 'next/head';
-import Attendance from './input'
+import Time from './time';
 import RenderPage from './render-page';
 
 
@@ -15,13 +15,13 @@ const Main_Page:NextPage= (first,last) =>{
       </Head>
        <div className={styles.main_page_container}>
              <div className={styles.left_pane}>
-          
+             <Time />
              </div>
            <div className={styles.centre_pane}>
                ATTENDENCE SYSTEM
-            </div>  
+            </div> 
             <div>
-            <hr />
+          
             <RenderPage />
             </div>
        </div>

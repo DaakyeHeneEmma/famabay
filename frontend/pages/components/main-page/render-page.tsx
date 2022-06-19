@@ -1,5 +1,6 @@
 import { useState } from "react"
 import PropPage from "./propPage"
+import PhotoUpload from "../card-items/photoupload"
 
 const RenderPage = ({firstname, lastname}:any) =>{
 
@@ -46,6 +47,7 @@ const RenderPage = ({firstname, lastname}:any) =>{
    <hr />
    <hr />
    <hr />
+   <PhotoUpload />
    <PropPage firstname={firstupdate} lastname={secondupdate}/>
         </>
     )
