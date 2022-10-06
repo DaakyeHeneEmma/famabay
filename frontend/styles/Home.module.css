@@ -1,5 +1,9 @@
 .container {
   padding: 0 2rem;
+  background-color: green;
+  display: border-box;
+  align-items: center;
+  height:80vh;
 }
 .layout{
   margin-left: 15px;
@@ -12,10 +16,7 @@
   background-color: black;
   color: white;
 }
-.footer{
-  background-color: lightblue; 
-  margin: 0 20px 0 20px;
-}
+
 .layout ol{
   display: grid;
   margin-top: -4rem;
@@ -57,31 +58,8 @@
   white-space: nowrap; 
 }
 
-.navbar_container ul{
-  margin-right: 250px;
-}
-.navbar_container ul li:active{
-  background-color: gold;
-}
-.navbar_container ul li:hover{
-  background-color: blue;
-}
-.navbar_container ul li{
- float: right;
- list-style-type: none;
- margin-right:50px;
- font-size: 20px;
- border: 1px solid black ;
- border-radius: 10px;
- padding: 0px 7px 0px 7px;
 
-}
-.navbar_container{
-  text-align: right;
-  list-style-type: none;
-  margin-top: -6rem;
-  margin-left: -60px;
-}
+
 .card_container{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -128,3 +106,18 @@
   padding: 5px;
 }
 
+
+.userdetails{
+  position: relative;
+  align-items: flex-end;
+  color: #FF4136;
+}
+
+.centre_pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  font-size:25px;
+}

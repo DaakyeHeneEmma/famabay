@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import avatar from "../../../public/avatar.png"
-// import "../../../public"
-import fs from 'fs'
 import path from 'path'
 
 export default function PrivatePage() {
@@ -14,8 +12,6 @@ export default function PrivatePage() {
   const uploadToClient = (event:any) => {
     if (event.target.files && event.target.files[0]) {
       const i = event.target.files[0];
-      
-
       setImage(i);
       setCreateObjectURL(URL.createObjectURL(i));
     }
@@ -32,7 +28,7 @@ export default function PrivatePage() {
 
   return (
     <div>
-      <div>
+      <div style={{"alignItems":"center", "display": "flex"}} > 
         <Image src={url || avatar} alt={""}  width={200} height={200}/>
         <h4>Select Image</h4>
         <input type="file" name="myImage" onChange={uploadToClient}  />

@@ -1,5 +1,5 @@
 const { router, UserSchema, app } = require('../middlewares/postRouter')
- const bcrypt = require("bcrypt")
+//  const bcrypt = require("bcrypt")
 
  const posts = router.post("/", async(req,res)=>{
     try {

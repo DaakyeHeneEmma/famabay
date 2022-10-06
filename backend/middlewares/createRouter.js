@@ -7,4 +7,4 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 const UserSchema = require('../model/userModel')
 
-module.exports = { router, UserSchema, app }
+module.exports = { router, UserSchema }

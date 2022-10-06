@@ -1,27 +1,25 @@
-import type { NextPage } from 'next';
-import styles from '../../../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import styles from "../../../styles/Home.module.css";
+import UserInput from "../component-pages/input";
+import Time from "../component-pages/time";
 
+const Landing_Page: NextPage = () => {
+  return (
+      <>
+        <Head>
+          <title>famabay</title>{" "}
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="landing" content="powered by famabay.inc" />
+        </Head>
+          <div className={styles.centre_pane}>
+            <Time />
+          </div>
+          <div className={styles.centre_pane}>ATTENDENCE SYSTEM</div>
+          <hr style={{"color":"white"}}/>
+          <UserInput />
+      </>
+  );
+};
 
-const Landing_Page:NextPage= () =>{
-    return (
-        <>
-       <div className={styles.landing_page_container}>
-            <div className={styles.landing_page_title}>
-             Become More
-            </div>
-            <div className={styles.landing_page_keyword}>
-             `Here I am sharing 40 best motivational and 
-             inspirational quotes from the web that has motivated 
-             me to become a developer. These quotes are very inspiring 
-             and I felt these will motivate other programmers too and help 
-             to avoid common pitfalls in development and hence I thought 
-             sharing these quotes with everybody.None of these quotes are
-              mine and please forgive if I have missed to mention the 
-              right source.`
-            </div>
-       </div>
-        </>
-    )
-}
-
-export default Landing_Page 
+export default Landing_Page;

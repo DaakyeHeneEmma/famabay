@@ -1,14 +1,9 @@
-import { format } from "path"
-import { useState, useEffect,useMemo, useRef } from "react"
+
+import { useState, useEffect } from "react"
 let date = new Date()
 
-export default function Time() {
-    // let month = date.getMonth() +1
-    // let year = date.getFullYear()
-    // let Hour = date.getHours()
-    // let Min = date.getMinutes()
-    // let Sec = date.getSeconds()
-    // let day = date.getDate()
+export default function Time():any {
+ 
    
 let [timer, setTimer] = useState(new Date())
 
@@ -27,10 +22,8 @@ useEffect(() => {
                 month: 'short',
                 year: 'numeric'
             })
-        }
-      </p>
-      <p>
-        {' '}
+        } -|-
+         {' '}
         {
             timer.toLocaleString('en-US', {
                 hour: 'numeric',

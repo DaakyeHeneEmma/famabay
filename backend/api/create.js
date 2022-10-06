@@ -10,6 +10,7 @@ const create = router.get('/', async(req,res,next)=>{
   user.save().then((result)=>{
     res.send(result)
     console.log(result);
+    console.log("default item")
   }).catch(err=>console.log(err))
   next()
 })

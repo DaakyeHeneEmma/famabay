@@ -24,7 +24,7 @@ request.onsuccess = function () {
                      .objectStore('president')
                      .openCursor()
     const gathered:any = []
-    type event = "h1"
+    type event = any
     cursor.onsuccess = function (event:event) {
         const cursor = event.target.result
         if (cursor != null) {
@@ -49,3 +49,7 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {
     const {name,age,course} = req.body
     res.status(200).json({name, age, course})
   }
+
+function okay(gathered: any, arg1: { firstName: string; lastName: string }[], arg2: string) {
+    throw new Error('Function not implemented.')
+}
