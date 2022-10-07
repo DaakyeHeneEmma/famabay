@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 // import data from "../../api/content"
 // import styles from '../../../styles/General.module.css'
 
-const UserInput = ({name,course}:any) =>{
+const UserInput = () =>{
     return (
        <>
        <Head>

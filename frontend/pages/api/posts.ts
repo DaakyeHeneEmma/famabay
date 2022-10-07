@@ -1,22 +1,18 @@
 
 async function posts(req:any,res:any){
 const body = req.body
-const courseData = await fetch("http://localhost:4000/api/alldata")
+const courseData = await fetch("http://localhost:4000/api/posts")
 const data  = await courseData.json().then((result)=>{
-    for (const ob of result) {
-        return ob
-    }
-       
+        return result
 })
 
 
-console.log(data)
+const newdata = data.forEach((e:any)=>{
+    console.log(e)
+  
+})
 
-// fetch("http://localhost:4000/api/alldata")
-//       .then((res) => res.json())
-//       .then((data) => {
-//         console.log(data);
-//       })
+
  console.log("body: ", body)
  if(!body.name || !body.course){
     return res.status(400).json({
@@ -31,7 +27,7 @@ console.log(data)
  res.status(200).json({
     data : `${body.name}
             ${body.course}
-            ${data}`
+            ${newdata}`
  })
 }
 

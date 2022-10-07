@@ -1,6 +1,5 @@
 
 import { NextApiRequest, NextApiResponse } from 'next'
-import data from './content'
 
 //recievig all user data from the backend
 export default async function handler(req:NextApiRequest, res:NextApiResponse){
